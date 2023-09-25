@@ -1,0 +1,518 @@
+@import "./css/stylesheet.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: system-ui, -apple-system, sans-serif; */
+  font-family: "IBM Plex Sans";
+}
+
+.body-container {
+  border-bottom: 1px solid #e1d0c0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header img {
+  margin: 10px 0 5px 0;
+  width: 155px;
+  height: 45px;
+  object-fit: cover;
+}
+
+/* ---------------------- */
+/* ----- Restaurant hero -*/
+/* ---------------------- */
+
+.section-restaurant {
+  margin: 30px auto;
+  display: flex;
+  gap: 30px;
+}
+
+section h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2e3333;
+  margin-bottom: 40px;
+}
+
+section h1 + p {
+  font-size: 19px;
+  color: #868a8a;
+  line-height: 28.8px;
+}
+
+section img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+}
+
+main {
+  background-color: #eeeeec;
+  max-width: 100vw;
+  /* height: 100vh; */
+  padding: 30px;
+}
+
+.category-cont {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.category-cont > div:first-child {
+  width: 890px;
+  /* border: solid red 1px; */
+}
+
+.category h2 {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #2e3333;
+  margin-bottom: 20px;
+}
+
+.meal-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 52px;
+
+  /* width: 820px; */
+  flex-wrap: wrap;
+}
+
+.meal {
+  width: 400px;
+  height: 160px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+}
+.meal:hover {
+  cursor: pointer;
+}
+
+.sub-meal {
+  display: flex;
+  gap: 30px;
+  padding: 15px;
+  width: 100%;
+}
+
+.sub-meal-content h3 {
+  font-size: 18px;
+  line-height: 15.6px;
+  color: #2e3333;
+  padding-bottom: 15px;
+}
+
+.sub-meal-content > div p:nth-child(2) {
+  font-size: 14px;
+  line-height: 20.8px;
+  color: #808484;
+}
+
+.sub-meal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sub-meal-content > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sub-meal-content .price {
+  font-size: 17px;
+  line-height: 20.8px;
+  color: #808484;
+}
+
+.sub-meal .popular {
+  color: #ff8000;
+  font-size: 14px;
+}
+
+.meal-img-bloc {
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+.meal-img-bloc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+aside {
+  width: 380px;
+  height: fit-content;
+  background-color: white;
+
+  position: sticky;
+  top: 20px;
+  padding: 10px;
+}
+
+.inner-aside {
+  max-height: calc((75vh - 10vh));
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  overflow: hidden auto;
+  /* overflow: hidden scroll; */
+}
+
+/* ---- close button in cart */
+.inner-aside > svg:first-child {
+  display: none;
+}
+
+.cart {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.cart span {
+  font-size: 16px;
+  color: #808484;
+}
+.cart svg {
+  background-color: white;
+  color: #00cdbd;
+  width: 20px;
+  height: 20px;
+}
+
+.cart-item {
+  flex: 0.9;
+  display: flex;
+  gap: 5px;
+}
+
+.cart-item > div:first-child {
+  display: flex;
+  gap: 5px;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: inherit;
+  color: white;
+}
+
+.inactive {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.inactive div {
+  text-align: center;
+  color: #8b9a9b;
+}
+.visibleXs {
+  display: none;
+}
+
+aside .active-button {
+  width: 100%;
+  border-radius: 8px;
+  height: 50px;
+  background-color: #00cdbd;
+}
+
+aside .inactive-button {
+  width: 100%;
+  border-radius: 8px;
+  height: 50px;
+  background-color: #bac3c3;
+  color: #8b9a9b;
+  font-weight: bold;
+}
+
+aside .inactive-button:hover {
+  cursor: not-allowed;
+}
+
+.sub-total {
+  height: 30px;
+  border-top: grey 1px solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  color: #8b9a9b;
+}
+
+.delivery {
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: grey 1px solid;
+  padding: 10px 0 20px 0;
+  color: #8b9a9b;
+}
+
+.total {
+  height: 4vh;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+  color: #8b9a9b;
+  padding-top: 10px;
+}
+
+.clear-button {
+  width: 40%;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 40px;
+  background-color: rgb(239, 124, 104);
+  margin: 30px 0 5px 0;
+}
+
+.clear-button:hover {
+  cursor: pointer;
+  background-color: tomato;
+}
+
+@media (max-width: 1270px) {
+  .category-cont > div:first-child {
+    width: 750px;
+  }
+
+  .meal {
+    width: calc((100% - 20px) / 2);
+    height: 160px;
+  }
+
+  .sub-meal-content h3 {
+    font-size: 15px;
+    line-height: 15.6px;
+    color: #2e3333;
+    padding-bottom: 15px;
+  }
+
+  .sub-meal-content > div p:nth-child(2) {
+    font-size: 12px;
+    line-height: 20.8px;
+    color: #808484;
+  }
+  .sub-meal-content .price {
+    font-size: 16px;
+  }
+
+  .sub-meal .popular {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1125px) {
+  aside {
+    width: 400px;
+  }
+
+  .meal-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .meal {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sub-meal {
+    width: 100%;
+  }
+}
+
+@media (max-width: 886px) {
+  .section-restaurant {
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+    flex-direction: column-reverse;
+  }
+
+  section h1 {
+    margin: 40px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e3333;
+  }
+
+  section h1 + p {
+    margin: 0 30px;
+    font-size: 16px;
+    color: #868a8a;
+    line-height: 24px;
+  }
+
+  section img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 769px) {
+  .category-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    /* overflow: hidden; */
+  }
+
+  .category-cont > div:first-child {
+    width: 100%;
+  }
+
+  .meal-container {
+    max-width: 694px;
+  }
+
+  .meal {
+    justify-content: space-between;
+  }
+
+  /* ----------------- */
+  /* ------- CART----- */
+  /* ----------------- */
+  aside {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    position: sticky;
+    bottom: 0px;
+    padding: 10px;
+    border: solid 1px lightgray;
+    border-radius: 10px;
+  }
+
+  .inactive {
+    width: 100%;
+    height: 60px;
+    gap: 0px;
+  }
+
+  .inactive div span {
+    display: none;
+  }
+
+  aside .inactive-button {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hide-active {
+    display: none;
+  }
+
+  .visibleXs {
+    display: inline-flex;
+    /* display: flex; */
+    position: relative;
+
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    position: sticky;
+    bottom: 0px;
+    padding: 10px;
+  }
+
+  .visibleXs span {
+    position: absolute;
+    font-size: 18px;
+    border: solid #822774 1px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #36054f;
+    border-radius: 5px;
+    /* bottom: 13px; */
+    bottom: 15px;
+    left: 40px;
+    z-index: 1;
+  }
+
+  /* .hide-active {
+    display: inline;
+  } */
+
+  aside .active-button {
+    width: 95%;
+    border-radius: 8px;
+    height: 50px;
+    background-color: #822774;
+  }
+
+  aside .active-pos1 {
+    position: absolute;
+    bottom: 2px;
+    margin: 5px 5px;
+  }
+
+  aside .active-pos2 {
+    position: absolute;
+    bottom: 2px;
+    margin: 5px 5px;
+    z-index: 1;
+  }
+
+  /* ---close  */
+  .inner-aside > svg:first-child {
+    display: inline;
+    height: 30px;
+    color: blue;
+    align-self: flex-end;
+    margin: 5px 0 10px 0;
+  }
+
+  .inner-aside > svg:first-child:hover {
+    cursor: pointer;
+    color: tomato;
+  }
+
+  aside .inactive-button {
+    width: 100%;
+    border-radius: 8px;
+    height: 50px;
+    background-color: #bac3c3;
+    color: #8b9a9b;
+    font-weight: bold;
+  }
+
+  aside .inactive-button:hover {
+    cursor: not-allowed;
+  }
+
+  .clear-button {
+    width: 25%;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .active {
+    padding-bottom: 90px;
+  }
+}
