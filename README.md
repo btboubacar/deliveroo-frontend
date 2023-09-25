@@ -38,7 +38,7 @@ $ yarn
 <div>
 <img src="./src/assets/captures/front1.gif" alt="animation 1" style="max-width: 90vw; height: 600px; border-radius: 10px">
 </div>
-<div style= "display: flex; flex-direction: column; align-items: center; gap : 10px">
+<di20px">
 <img src="./src/assets/captures/front2.gif" alt="animation 2" style="max-width: 60vw; height: 600px; border-radius: 10px">
 <img src="./src/assets/captures/front3.gif" alt="animation 3" style="max-width: 60vw; height: 600px; border-radius: 10px">
 </div>
